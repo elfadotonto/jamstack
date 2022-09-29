@@ -1,20 +1,27 @@
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import { Page } from './Page';
 import "../styles/globals.css";
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+import Feature from "../components/Feature";
+import Grid from "../components/Grid";
+import Page from "../components/Page";
+import Teaser from "../components/Teaser";
+import HeroSection from "../components/HeroSection";
+import AllArticles from "../components/AllArticles";
+import Article from "../components/Article";
+
+const components = {
+  feature: Feature,
+  grid: Grid,
+  teaser: Teaser,
+  page: Page,
+  hero_section: HeroSection,
+  all_articles: AllArticles,
+  article: Article,
+};
 
 storyblokInit({
-  accessToken: "bAIGr0QLo25JJhu79kwXKQtt",
-  // bridge: false,
-  apiOptions: {
-    region: "eu", 
-  },
+  accessToken: "F9OJvLvW6rYQ7rET6rdpzAtt",
   use: [apiPlugin],
-  components: {
-      page: Page,
-      teaser: Teaser,
-      grid: Grid,
-      feature: Feature,
-  },
+  components,
 });
 
 function MyApp({ Component, pageProps }) {
