@@ -9,10 +9,10 @@ storyblokInit({
   },
   use: [apiPlugin],
   components: {
-    page: Page,
-    teaser: Teaser,
-    grid: Grid,
-    feature: Feature,
+//    page: Page,
+//    teaser: Teaser,
+//    grid: Grid,
+//    feature: Feature,
   },
 });
 
